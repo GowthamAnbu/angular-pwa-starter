@@ -8,15 +8,19 @@ import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
 import { MaterialModule } from './material/material.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // not needed now
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    // NgbModule.forRoot(), // not neede now
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
